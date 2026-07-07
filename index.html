@@ -1,0 +1,1428 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>TORAS Fragrances</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+scroll-behavior:smooth;
+}
+
+body{
+
+background:#070707;
+color:white;
+font-family:'Poppins',sans-serif;
+overflow-x:hidden;
+
+}
+
+::-webkit-scrollbar{
+
+width:10px;
+
+}
+
+::-webkit-scrollbar-thumb{
+
+background:#C7A84B;
+border-radius:20px;
+
+}
+
+::-webkit-scrollbar-track{
+
+background:#111;
+
+}
+
+/* NAVBAR */
+
+nav{
+
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:80px;
+display:flex;
+align-items:center;
+justify-content:space-between;
+padding:0 60px;
+background:rgba(0,0,0,.65);
+backdrop-filter:blur(10px);
+z-index:999;
+
+}
+
+.logo{
+
+font-family:'Cinzel',serif;
+font-size:34px;
+color:#C7A84B;
+letter-spacing:5px;
+
+}
+
+nav ul{
+
+display:flex;
+gap:35px;
+list-style:none;
+
+}
+
+nav a{
+
+text-decoration:none;
+color:white;
+font-size:15px;
+transition:.3s;
+
+}
+
+nav a:hover{
+
+color:#C7A84B;
+
+}
+
+/* CART */
+
+.cartIcon{
+
+position:relative;
+font-size:28px;
+cursor:pointer;
+
+}
+
+.cartCount{
+
+position:absolute;
+top:-10px;
+right:-10px;
+
+background:#C7A84B;
+color:black;
+
+width:22px;
+height:22px;
+
+border-radius:50%;
+
+display:flex;
+align-items:center;
+justify-content:center;
+
+font-size:12px;
+font-weight:bold;
+
+}
+
+/* LANDING */
+
+#landing{
+
+height:100vh;
+display:flex;
+position:relative;
+
+}
+
+.middleLine{
+
+position:absolute;
+left:50%;
+top:0;
+
+width:2px;
+height:100%;
+
+background:#C7A84B;
+
+box-shadow:
+
+0 0 10px #C7A84B,
+0 0 20px #C7A84B;
+
+}
+
+.side{
+
+flex:1;
+
+display:flex;
+align-items:center;
+justify-content:center;
+
+cursor:pointer;
+
+transition:.5s;
+
+position:relative;
+
+}
+
+.side::before{
+
+content:'';
+
+position:absolute;
+top:0;
+left:0;
+
+width:100%;
+height:100%;
+
+background:rgba(255,255,255,0);
+
+transition:.5s;
+
+}
+
+.side:hover::before{
+
+background:rgba(255,215,0,.05);
+
+}
+
+.side:hover{
+
+transform:scale(1.02);
+
+}
+
+.side h1{
+
+font-family:'Cinzel',serif;
+
+font-size:80px;
+letter-spacing:12px;
+font-weight:500;
+
+transition:.4s;
+
+}
+
+.side:hover h1{
+
+color:#C7A84B;
+
+text-shadow:
+
+0 0 10px #C7A84B,
+0 0 20px #C7A84B;
+
+transform:scale(1.08);
+
+}
+
+/* SHOP */
+
+.shop{
+
+display:none;
+
+padding:140px 60px;
+
+animation:fade .5s;
+
+}
+
+@keyframes fade{
+
+from{
+
+opacity:0;
+transform:translateY(40px);
+
+}
+
+to{
+
+opacity:1;
+transform:none;
+
+}
+
+}
+
+.title{
+
+font-family:'Cinzel',serif;
+
+font-size:45px;
+
+color:#C7A84B;
+
+margin-bottom:50px;
+
+text-align:center;
+
+}
+
+.products{
+
+display:grid;
+
+grid-template-columns:
+
+repeat(auto-fit,minmax(300px,1fr));
+
+gap:35px;
+
+}
+
+.card{
+
+background:#111;
+
+border:1px solid #C7A84B;
+
+border-radius:18px;
+
+padding:25px;
+
+transition:.4s;
+
+}
+
+.card:hover{
+
+transform:translateY(-10px);
+
+box-shadow:
+
+0 0 25px rgba(199,168,75,.3);
+
+}
+
+.image{
+
+height:260px;
+
+background:#1d1d1d;
+
+border-radius:15px;
+
+display:flex;
+
+align-items:center;
+
+justify-content:center;
+
+font-size:30px;
+
+color:#C7A84B;
+
+margin-bottom:20px;
+
+}
+
+.name{
+
+font-size:24px;
+
+margin-bottom:12px;
+
+}
+
+.price{
+
+font-size:20px;
+
+color:#C7A84B;
+
+margin-bottom:20px;
+
+}
+
+.size{
+
+width:100%;
+
+padding:14px;
+
+background:#181818;
+
+border:1px solid #C7A84B;
+
+color:white;
+
+margin-bottom:15px;
+
+border-radius:10px;
+
+}
+
+.add{
+
+width:100%;
+
+padding:14px;
+
+border:none;
+
+background:#C7A84B;
+
+color:black;
+
+font-weight:bold;
+
+border-radius:10px;
+
+cursor:pointer;
+
+transition:.3s;
+
+}
+
+.add:hover{
+
+transform:scale(1.03);
+
+}
+/* ---------- PART 2/4 ---------- */
+/* Continue directly after Part 1 */
+
+.cartDrawer{
+
+position:fixed;
+right:-420px;
+top:0;
+
+width:420px;
+height:100vh;
+
+background:#111;
+
+border-left:2px solid #C7A84B;
+
+padding:25px;
+
+transition:.45s;
+
+z-index:2000;
+
+overflow:auto;
+
+}
+
+.cartDrawer.active{
+
+right:0;
+
+}
+
+.cartTitle{
+
+font-family:'Cinzel',serif;
+font-size:30px;
+color:#C7A84B;
+
+margin-bottom:25px;
+
+}
+
+.cartItems{
+
+margin-bottom:20px;
+
+}
+
+.cartItem{
+
+display:flex;
+justify-content:space-between;
+align-items:center;
+
+padding:15px 0;
+
+border-bottom:1px solid #333;
+
+}
+
+.total{
+
+font-size:23px;
+margin:20px 0;
+
+color:#C7A84B;
+
+}
+
+.promo{
+
+display:flex;
+gap:10px;
+margin:20px 0;
+
+}
+
+.promo input{
+
+flex:1;
+
+padding:12px;
+
+background:#1b1b1b;
+
+border:1px solid #C7A84B;
+
+color:white;
+
+border-radius:8px;
+
+}
+
+.promo button{
+
+padding:12px 18px;
+
+background:#C7A84B;
+
+border:none;
+
+cursor:pointer;
+
+font-weight:bold;
+
+border-radius:8px;
+
+}
+
+.checkout{
+
+width:100%;
+
+padding:15px;
+
+background:#C7A84B;
+
+color:black;
+
+border:none;
+
+font-size:18px;
+
+cursor:pointer;
+
+border-radius:10px;
+
+margin-top:20px;
+
+}
+
+/* MEN PRODUCTS */
+
+</style>
+
+</head>
+
+<body>
+
+<nav>
+
+<div class="logo">
+
+TORAS
+
+</div>
+
+<ul>
+
+<li><a href="#" onclick="goHome()">Home</a></li>
+
+<li><a href="#" onclick="openMen()">Men</a></li>
+
+<li><a href="#" onclick="openWomen()">Women</a></li>
+
+</ul>
+
+<div class="cartIcon" onclick="toggleCart()">
+
+🛒
+
+<div class="cartCount" id="cartCount">
+
+0
+
+</div>
+
+</div>
+
+</nav>
+
+<div class="cartDrawer" id="cart">
+
+<h2 class="cartTitle">
+
+Shopping Cart
+
+</h2>
+
+<div id="cartItems" class="cartItems">
+
+Your cart is empty.
+
+</div>
+
+<div class="promo">
+
+<input
+id="promoCode"
+placeholder="Promo Code">
+
+<button
+onclick="applyPromo()">
+
+Apply
+
+</button>
+
+</div>
+
+<h2 class="total">
+
+Total:
+
+<span id="total">
+
+0
+
+</span>
+
+EGP
+
+</h2>
+
+<button
+class="checkout"
+onclick="checkout()">
+
+Checkout
+
+</button>
+
+</div>
+
+<section id="landing">
+
+<div class="middleLine"></div>
+
+<div class="side"
+onclick="openMen()">
+
+<h1>
+
+MEN
+
+</h1>
+
+</div>
+
+<div class="side"
+onclick="openWomen()">
+
+<h1>
+
+WOMEN
+
+</h1>
+
+</div>
+
+</section>
+
+<section
+class="shop"
+id="menShop">
+
+<h1 class="title">
+
+MEN COLLECTION
+
+</h1>
+
+<div class="products">
+
+<div class="card">
+
+<div class="image">
+
+PHOTO
+
+</div>
+
+<h2 class="name">
+
+Youssef
+
+</h2>
+
+<select class="size">
+
+<option value="350">
+
+40 ML - 350 EGP
+
+</option>
+
+<option value="650">
+
+60 ML - 650 EGP
+
+</option>
+
+</select>
+
+<button
+class="add"
+onclick="addProduct('Youssef',this)">
+
+Add To Cart
+
+</button>
+
+</div>
+
+<div class="card">
+
+<div class="image">
+
+PHOTO
+
+</div>
+
+<h2 class="name">
+
+Dravon
+
+</h2>
+
+<select class="size">
+
+<option value="450">
+
+40 ML - 450 EGP
+
+</option>
+
+<option value="800">
+
+60 ML - 800 EGP
+
+</option>
+
+</select>
+
+<button
+class="add"
+onclick="addProduct('Dravon',this)">
+
+Add To Cart
+
+</button>
+
+</div>
+
+<div class="card">
+
+<div class="image">
+
+PHOTO
+
+</div>
+
+<h2 class="name">
+
+Tobacco
+
+</h2>
+
+<select class="size">
+
+<option value="400">
+
+40 ML - 400 EGP
+
+</option>
+
+<option value="700">
+
+60 ML - 700 EGP
+
+</option>
+
+</select>
+
+<button
+class="add"
+onclick="addProduct('Tobacco',this)">
+
+Add To Cart
+
+</button>
+
+</div>
+
+</div>
+
+</section>
+<!-- ========================= -->
+<!-- PART 3 / 4 -->
+<!-- Continue directly after Part 2 -->
+<!-- ========================= -->
+
+<section
+class="shop"
+id="womenShop">
+
+<h1 class="title">
+
+WOMEN COLLECTION
+
+</h1>
+
+<div class="products">
+
+<div class="card">
+
+<div class="image">
+
+PHOTO
+
+</div>
+
+<h2 class="name">
+
+Tusunami
+
+</h2>
+
+<select class="size">
+
+<option value="350">
+
+40 ML - 350 EGP
+
+</option>
+
+<option value="650">
+
+60 ML - 650 EGP
+
+</option>
+
+</select>
+
+<button
+class="add"
+onclick="addProduct('Tusunami',this)">
+
+Add To Cart
+
+</button>
+
+</div>
+
+<div class="card">
+
+<div class="image">
+
+PHOTO
+
+</div>
+
+<h2 class="name">
+
+The Last Birthday
+
+</h2>
+
+<select class="size">
+
+<option value="350">
+
+40 ML - 350 EGP
+
+</option>
+
+<option value="650">
+
+60 ML - 650 EGP
+
+</option>
+
+</select>
+
+<button
+class="add"
+onclick="addProduct('The Last Birthday',this)">
+
+Add To Cart
+
+</button>
+
+</div>
+
+<div class="card">
+
+<div class="image">
+
+PHOTO
+
+</div>
+
+<h2 class="name">
+
+Nuts
+
+</h2>
+
+<select class="size">
+
+<option value="400">
+
+40 ML - 400 EGP
+
+</option>
+
+<option value="700">
+
+60 ML - 700 EGP
+
+</option>
+
+</select>
+
+<button
+class="add"
+onclick="addProduct('Nuts',this)">
+
+Add To Cart
+
+</button>
+
+</div>
+
+<div class="card">
+
+<div class="image">
+
+PHOTO
+
+</div>
+
+<h2 class="name">
+
+Afternoon
+
+</h2>
+
+<select class="size">
+
+<option value="400">
+
+40 ML - 400 EGP
+
+</option>
+
+<option value="700">
+
+60 ML - 700 EGP
+
+</option>
+
+</select>
+
+<button
+class="add"
+onclick="addProduct('Afternoon',this)">
+
+Add To Cart
+
+</button>
+
+</div>
+
+<div class="card">
+
+<div class="image">
+
+PHOTO
+
+</div>
+
+<h2 class="name">
+
+Intensely
+
+</h2>
+
+<select class="size">
+
+<option value="400">
+
+40 ML - 400 EGP
+
+</option>
+
+<option value="700">
+
+60 ML - 700 EGP
+
+</option>
+
+</select>
+
+<button
+class="add"
+onclick="addProduct('Intensely',this)">
+
+Add To Cart
+
+</button>
+
+</div>
+
+<div class="card">
+
+<div class="image">
+
+PHOTO
+
+</div>
+
+<h2 class="name">
+
+Hell
+
+</h2>
+
+<select class="size">
+
+<option value="350">
+
+40 ML - 350 EGP
+
+</option>
+
+<option value="650">
+
+60 ML - 650 EGP
+
+</option>
+
+</select>
+
+<button
+class="add"
+onclick="addProduct('Hell',this)">
+
+Add To Cart
+
+</button>
+
+</div>
+
+<div class="card">
+
+<div class="image">
+
+PHOTO
+
+</div>
+
+<h2 class="name">
+
+Heaven
+
+</h2>
+
+<select class="size">
+
+<option value="350">
+
+40 ML - 350 EGP
+
+</option>
+
+<option value="650">
+
+60 ML - 650 EGP
+
+</option>
+
+</select>
+
+<button
+class="add"
+onclick="addProduct('Heaven',this)">
+
+Add To Cart
+
+</button>
+
+</div>
+
+</div>
+
+</section>
+
+<script>
+
+let cart=[];
+
+let discount=0;
+
+const promoCodes={
+
+YASSIN10:10,
+
+WELCOME15:15,
+
+TORAS20:20
+
+};
+
+function openMen(){
+
+landing.style.display="none";
+
+womenShop.style.display="none";
+
+menShop.style.display="block";
+
+}
+
+function openWomen(){
+
+landing.style.display="none";
+
+menShop.style.display="none";
+
+womenShop.style.display="block";
+
+}
+
+function goHome(){
+
+landing.style.display="flex";
+
+menShop.style.display="none";
+
+womenShop.style.display="none";
+
+}
+
+function toggleCart(){
+
+cart.classList.toggle("active");
+
+}
+
+function addProduct(name,btn){
+
+let select=btn.parentElement.querySelector(".size");
+
+let price=Number(select.value);
+
+let size=select.options[select.selectedIndex].text;
+
+cart.push({
+
+name,
+
+price,
+
+size
+
+});
+
+updateCart();
+
+}
+
+function updateCart(){
+
+let html="";
+
+let total=0;
+
+cart.forEach(item=>{
+
+html+=`
+
+<div class="cartItem">
+
+<div>
+
+<b>${item.name}</b>
+
+<br>
+
+${item.size}
+
+</div>
+
+<div>
+
+${item.price} EGP
+
+</div>
+
+</div>
+
+`;
+
+total+=item.price;
+
+});
+
+total=total-(total*discount/100);
+
+document.getElementById("cartItems").innerHTML=html||"Your cart is empty.";
+
+document.getElementById("total").innerHTML=total;
+
+document.getElementById("cartCount").innerHTML=cart.length;
+
+}
+
+function applyPromo(){
+
+let code=document.getElementById("promoCode").value.toUpperCase();
+
+if(promoCodes[code]){
+
+discount=promoCodes[code];
+
+alert("Promo Applied! "+discount+"% OFF");
+
+}else{
+
+discount=0;
+
+alert("Invalid Promo Code");
+
+}
+
+updateCart();
+
+}
+<!-- ========================= -->
+<!-- PART 4A / 4 -->
+<!-- Continue after Part 3 -->
+<!-- ========================= -->
+
+const SERVICE_ID="service_3okjoac";
+const PUBLIC_KEY="5bfxJmBRr2Tv4w7ja";
+const TEMPLATE_ID="PUT_YOUR_TEMPLATE_ID_HERE";
+
+emailjs.init(PUBLIC_KEY);
+
+function checkout(){
+
+if(cart.length==0){
+
+alert("Your cart is empty.");
+
+return;
+
+}
+
+let form=`
+
+<div id="checkoutBox"
+
+style="
+
+position:fixed;
+top:50%;
+left:50%;
+
+transform:translate(-50%,-50%);
+
+background:#111;
+
+padding:30px;
+
+width:420px;
+
+border:2px solid #C7A84B;
+
+border-radius:18px;
+
+z-index:9999;
+
+">
+
+<h2 style="color:#C7A84B">
+
+Checkout
+
+</h2>
+
+<input id="cName"
+
+placeholder="Full Name"
+
+style="width:100%;
+padding:12px;
+margin-top:15px;">
+
+<input id="cPhone"
+
+placeholder="Phone Number"
+
+style="width:100%;
+padding:12px;
+margin-top:12px;">
+
+<input id="cEmail"
+
+placeholder="Email"
+
+style="width:100%;
+padding:12px;
+margin-top:12px;">
+
+<input id="cAddress"
+
+placeholder="Address"
+
+style="width:100%;
+padding:12px;
+margin-top:12px;">
+
+<button
+
+onclick="sendOrder()"
+
+style="
+
+width:100%;
+margin-top:20px;
+padding:14px;
+background:#C7A84B;
+border:none;
+cursor:pointer;
+
+">
+
+Place Order
+
+</button>
+
+</div>
+
+`;
+
+document.body.insertAdjacentHTML("beforeend",form);
+
+}
+
+function sendOrder(){
+
+let items="";
+
+let total=0;
+
+cart.forEach(p=>{
+
+items+=
+
+p.name+
+
+" | "+
+
+p.size+
+
+" | "+
+
+p.price+
+
+" EGP\n";
+
+total+=p.price;
+
+});
+
+total=total-(total*discount/100);
+
+emailjs.send(
+
+SERVICE_ID,
+
+TEMPLATE_ID,
+
+{
+
+name:
+
+document.getElementById("cName").value,
+
+phone:
+
+document.getElementById("cPhone").value,
+
+email:
+
+document.getElementById("cEmail").value,
+
+address:
+
+document.getElementById("cAddress").value,
+
+items:items,
+
+total:total
+
+}
+
+)
+.then(()=>{
+    alert("Order sent successfully!");
+
+cart=[];
+
+discount=0;
+
+document.getElementById("promoCode").value="";
+
+updateCart();
+
+document.getElementById("checkoutBox").remove();
+
+})
+
+.catch((error)=>{
+
+alert("Failed to send order.");
+
+console.log(error);
+
+});
+
+}
+
+</script>
+
+<script
+src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+</script>
+
+</body>
+
+</html>
