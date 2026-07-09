@@ -1,12 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>TORAS Fragrances</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
 
 <style>
 
@@ -14,146 +15,116 @@
 margin:0;
 padding:0;
 box-sizing:border-box;
+font-family:Poppins,sans-serif;
 scroll-behavior:smooth;
 }
 
 body{
-
-background:#070707;
+background:#050505;
 color:white;
-font-family:'Poppins',sans-serif;
 overflow-x:hidden;
-
 }
 
 ::-webkit-scrollbar{
-
-width:10px;
-
+width:8px;
 }
 
 ::-webkit-scrollbar-thumb{
-
-background:#C7A84B;
-border-radius:20px;
-
+background:#c8a04d;
+border-radius:50px;
 }
-
-::-webkit-scrollbar-track{
-
-background:#111;
-
-}
-
-/* NAVBAR */
 
 nav{
 
 position:fixed;
+
 top:0;
 left:0;
+
 width:100%;
 height:80px;
+
+background:rgba(0,0,0,.75);
+
+backdrop-filter:blur(12px);
+
 display:flex;
+
 align-items:center;
+
 justify-content:space-between;
+
 padding:0 60px;
-background:rgba(0,0,0,.65);
-backdrop-filter:blur(10px);
+
 z-index:999;
 
 }
 
 .logo{
 
-font-family:'Cinzel',serif;
+font-family:Cinzel,serif;
+
 font-size:34px;
-color:#C7A84B;
+
 letter-spacing:5px;
+
+color:#c8a04d;
 
 }
 
 nav ul{
 
 display:flex;
+
 gap:35px;
+
 list-style:none;
 
 }
 
-nav a{
+nav ul li{
 
-text-decoration:none;
-color:white;
-font-size:15px;
+cursor:pointer;
+
 transition:.3s;
 
 }
 
-nav a:hover{
+nav ul li:hover{
 
-color:#C7A84B;
-
-}
-
-/* CART */
-
-.cartIcon{
-
-position:relative;
-font-size:28px;
-cursor:pointer;
+color:#c8a04d;
 
 }
 
-.cartCount{
+.cartButton{
 
-position:absolute;
-top:-10px;
-right:-10px;
+background:#c8a04d;
 
-background:#C7A84B;
 color:black;
 
-width:22px;
-height:22px;
+padding:12px 24px;
 
-border-radius:50%;
+border-radius:30px;
 
-display:flex;
-align-items:center;
-justify-content:center;
-
-font-size:12px;
 font-weight:bold;
+
+cursor:pointer;
+
+transition:.3s;
 
 }
 
-/* LANDING */
+.cartButton:hover{
+
+transform:scale(1.05);
+
+}
 
 #landing{
 
 height:100vh;
+
 display:flex;
-position:relative;
-
-}
-
-.middleLine{
-
-position:absolute;
-left:50%;
-top:0;
-
-width:2px;
-height:100%;
-
-background:#C7A84B;
-
-box-shadow:
-
-0 0 10px #C7A84B,
-0 0 20px #C7A84B;
 
 }
 
@@ -162,72 +133,40 @@ box-shadow:
 flex:1;
 
 display:flex;
-align-items:center;
+
 justify-content:center;
+
+align-items:center;
+
+font-family:Cinzel,serif;
+
+font-size:90px;
 
 cursor:pointer;
 
-transition:.5s;
+transition:.4s;
 
 position:relative;
 
 }
 
-.side::before{
-
-content:'';
-
-position:absolute;
-top:0;
-left:0;
-
-width:100%;
-height:100%;
-
-background:rgba(255,255,255,0);
-
-transition:.5s;
-
-}
-
-.side:hover::before{
-
-background:rgba(255,215,0,.05);
-
-}
-
 .side:hover{
 
-transform:scale(1.02);
+background:#111;
+
+color:#c8a04d;
 
 }
 
-.side h1{
+.divider{
 
-font-family:'Cinzel',serif;
+width:2px;
 
-font-size:80px;
-letter-spacing:12px;
-font-weight:500;
+background:#c8a04d;
 
-transition:.4s;
+box-shadow:0 0 20px gold;
 
 }
-
-.side:hover h1{
-
-color:#C7A84B;
-
-text-shadow:
-
-0 0 10px #C7A84B,
-0 0 20px #C7A84B;
-
-transform:scale(1.08);
-
-}
-
-/* SHOP */
 
 .shop{
 
@@ -235,39 +174,19 @@ display:none;
 
 padding:140px 60px;
 
-animation:fade .5s;
-
-}
-
-@keyframes fade{
-
-from{
-
-opacity:0;
-transform:translateY(40px);
-
-}
-
-to{
-
-opacity:1;
-transform:none;
-
-}
-
 }
 
 .title{
 
-font-family:'Cinzel',serif;
-
-font-size:45px;
-
-color:#C7A84B;
-
-margin-bottom:50px;
+font-size:42px;
 
 text-align:center;
+
+font-family:Cinzel,serif;
+
+color:#c8a04d;
+
+margin-bottom:40px;
 
 }
 
@@ -275,11 +194,9 @@ text-align:center;
 
 display:grid;
 
-grid-template-columns:
+grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
 
-repeat(auto-fit,minmax(300px,1fr));
-
-gap:35px;
+gap:30px;
 
 }
 
@@ -287,11 +204,11 @@ gap:35px;
 
 background:#111;
 
-border:1px solid #C7A84B;
+border:1px solid #c8a04d;
 
 border-radius:18px;
 
-padding:25px;
+padding:20px;
 
 transition:.4s;
 
@@ -301,124 +218,107 @@ transition:.4s;
 
 transform:translateY(-10px);
 
-box-shadow:
-
-0 0 25px rgba(199,168,75,.3);
+box-shadow:0 0 30px rgba(200,160,77,.35);
 
 }
 
-.image{
+.card img{
+
+width:100%;
 
 height:260px;
 
-background:#1d1d1d;
+object-fit:cover;
 
-border-radius:15px;
-
-display:flex;
-
-align-items:center;
-
-justify-content:center;
-
-font-size:30px;
-
-color:#C7A84B;
-
-margin-bottom:20px;
-
-}
-
-.name{
-
-font-size:24px;
-
-margin-bottom:12px;
-
-}
-
-.price{
-
-font-size:20px;
-
-color:#C7A84B;
-
-margin-bottom:20px;
-
-}
-
-.size{
-
-width:100%;
-
-padding:14px;
-
-background:#181818;
-
-border:1px solid #C7A84B;
-
-color:white;
+border-radius:12px;
 
 margin-bottom:15px;
 
-border-radius:10px;
+}
+
+.card h2{
+
+margin-bottom:15px;
+
+font-family:Cinzel,serif;
 
 }
 
-.add{
+select{
+
+width:100%;
+
+padding:12px;
+
+margin-top:10px;
+
+background:#181818;
+
+color:white;
+
+border:1px solid #c8a04d;
+
+border-radius:8px;
+
+}
+
+button{
 
 width:100%;
 
 padding:14px;
 
+margin-top:15px;
+
 border:none;
 
-background:#C7A84B;
+background:#c8a04d;
 
 color:black;
 
 font-weight:bold;
 
-border-radius:10px;
-
 cursor:pointer;
+
+border-radius:10px;
 
 transition:.3s;
 
 }
 
-.add:hover{
+button:hover{
 
 transform:scale(1.03);
 
 }
-/* ---------- PART 2/4 ---------- */
-/* Continue directly after Part 1 */
 
-.cartDrawer{
+#cart{
 
 position:fixed;
-right:-420px;
+
+right:-450px;
+
 top:0;
 
-width:420px;
+width:430px;
+
 height:100vh;
 
 background:#111;
 
-border-left:2px solid #C7A84B;
-
 padding:25px;
 
-transition:.45s;
-
-z-index:2000;
+transition:.4s;
 
 overflow:auto;
 
+border-left:2px solid #c8a04d;
+
+z-index:2000;
+
 }
 
-.cartDrawer.active{
+#cart.active{
 
 right:0;
 
@@ -426,15 +326,11 @@ right:0;
 
 .cartTitle{
 
-font-family:'Cinzel',serif;
 font-size:30px;
-color:#C7A84B;
 
-margin-bottom:25px;
+font-family:Cinzel,serif;
 
-}
-
-.cartItems{
+color:#c8a04d;
 
 margin-bottom:20px;
 
@@ -442,42 +338,33 @@ margin-bottom:20px;
 
 .cartItem{
 
-display:flex;
-justify-content:space-between;
-align-items:center;
+border-bottom:1px solid #333;
 
 padding:15px 0;
-
-border-bottom:1px solid #333;
 
 }
 
 .total{
 
-font-size:23px;
-margin:20px 0;
+font-size:24px;
 
-color:#C7A84B;
+margin-top:20px;
 
-}
-
-.promo{
-
-display:flex;
-gap:10px;
-margin:20px 0;
+color:#c8a04d;
 
 }
 
-.promo input{
+input{
 
-flex:1;
+width:100%;
 
 padding:12px;
 
-background:#1b1b1b;
+margin-top:12px;
 
-border:1px solid #C7A84B;
+background:#1a1a1a;
+
+border:1px solid #c8a04d;
 
 color:white;
 
@@ -485,48 +372,7 @@ border-radius:8px;
 
 }
 
-.promo button{
-
-padding:12px 18px;
-
-background:#C7A84B;
-
-border:none;
-
-cursor:pointer;
-
-font-weight:bold;
-
-border-radius:8px;
-
-}
-
-.checkout{
-
-width:100%;
-
-padding:15px;
-
-background:#C7A84B;
-
-color:black;
-
-border:none;
-
-font-size:18px;
-
-cursor:pointer;
-
-border-radius:10px;
-
-margin-top:20px;
-
-}
-
-/* MEN PRODUCTS */
-
 </style>
-
 </head>
 
 <body>
@@ -541,56 +387,71 @@ TORAS
 
 <ul>
 
-<li><a href="#" onclick="goHome()">Home</a></li>
+<li onclick="goHome()">Home</li>
 
-<li><a href="#" onclick="openMen()">Men</a></li>
+<li onclick="showMen()">Men</li>
 
-<li><a href="#" onclick="openWomen()">Women</a></li>
+<li onclick="showWomen()">Women</li>
 
 </ul>
 
-<div class="cartIcon" onclick="toggleCart()">
+<div class="cartButton" onclick="toggleCart()">
 
-🛒
-
-<div class="cartCount" id="cartCount">
-
-0
-
-</div>
+🛒 Cart (<span id="cartCount">0</span>)
 
 </div>
 
 </nav>
 
-<div class="cartDrawer" id="cart">
+<!-- LANDING -->
 
-<h2 class="cartTitle">
+<section id="landing">
+
+<div class="side" onclick="showMen()">
+
+MEN
+
+</div>
+
+<div class="divider"></div>
+
+<div class="side" onclick="showWomen()">
+
+WOMEN
+
+</div>
+
+</section>
+
+<!-- CART -->
+
+<div id="cart">
+
+<h1 class="cartTitle">
 
 Shopping Cart
 
-</h2>
+</h1>
 
-<div id="cartItems" class="cartItems">
+<div id="cartItems">
 
 Your cart is empty.
 
 </div>
 
-<div class="promo">
+<br>
 
 <input
-id="promoCode"
-placeholder="Promo Code">
 
-<button
-onclick="applyPromo()">
+id="promo"
 
-Apply
+placeholder="Discount Code">
+
+<button onclick="applyPromo()">
+
+Apply Code
 
 </button>
-
-</div>
 
 <h2 class="total">
 
@@ -606,9 +467,7 @@ EGP
 
 </h2>
 
-<button
-class="checkout"
-onclick="checkout()">
+<button onclick="checkout()">
 
 Checkout
 
@@ -616,37 +475,11 @@ Checkout
 
 </div>
 
-<section id="landing">
-
-<div class="middleLine"></div>
-
-<div class="side"
-onclick="openMen()">
-
-<h1>
-
-MEN
-
-</h1>
-
-</div>
-
-<div class="side"
-onclick="openWomen()">
-
-<h1>
-
-WOMEN
-
-</h1>
-
-</div>
-
-</section>
+<!-- MEN -->
 
 <section
-class="shop"
-id="menShop">
+id="men"
+class="shop">
 
 <h1 class="title">
 
@@ -658,37 +491,27 @@ MEN COLLECTION
 
 <div class="card">
 
-<div class="image">
+<img src="images/youssef.jpg">
 
-PHOTO
+<h2>Youssef</h2>
 
-</div>
-
-<h2 class="name">
-
-Youssef
-
-</h2>
-
-<select class="size">
+<select>
 
 <option value="350">
 
-40 ML - 350 EGP
+40ML - 350 EGP
 
 </option>
 
 <option value="650">
 
-60 ML - 650 EGP
+60ML - 650 EGP
 
 </option>
 
 </select>
 
-<button
-class="add"
-onclick="addProduct('Youssef',this)">
+<button onclick="addToCart('Youssef',this)">
 
 Add To Cart
 
@@ -698,37 +521,27 @@ Add To Cart
 
 <div class="card">
 
-<div class="image">
+<img src="images/dravon.jpg">
 
-PHOTO
+<h2>Dravon</h2>
 
-</div>
-
-<h2 class="name">
-
-Dravon
-
-</h2>
-
-<select class="size">
+<select>
 
 <option value="450">
 
-40 ML - 450 EGP
+40ML - 450 EGP
 
 </option>
 
 <option value="800">
 
-60 ML - 800 EGP
+60ML - 800 EGP
 
 </option>
 
 </select>
 
-<button
-class="add"
-onclick="addProduct('Dravon',this)">
+<button onclick="addToCart('Dravon',this)">
 
 Add To Cart
 
@@ -738,37 +551,27 @@ Add To Cart
 
 <div class="card">
 
-<div class="image">
+<img src="images/tobacco.jpg">
 
-PHOTO
+<h2>Tobacco</h2>
 
-</div>
-
-<h2 class="name">
-
-Tobacco
-
-</h2>
-
-<select class="size">
+<select>
 
 <option value="400">
 
-40 ML - 400 EGP
+40ML - 400 EGP
 
 </option>
 
 <option value="700">
 
-60 ML - 700 EGP
+60ML - 700 EGP
 
 </option>
 
 </select>
 
-<button
-class="add"
-onclick="addProduct('Tobacco',this)">
+<button onclick="addToCart('Tobacco',this)">
 
 Add To Cart
 
@@ -779,14 +582,12 @@ Add To Cart
 </div>
 
 </section>
-<!-- ========================= -->
-<!-- PART 3 / 4 -->
-<!-- Continue directly after Part 2 -->
-<!-- ========================= -->
+
+<!-- WOMEN -->
 
 <section
-class="shop"
-id="womenShop">
+id="women"
+class="shop">
 
 <h1 class="title">
 
@@ -798,37 +599,27 @@ WOMEN COLLECTION
 
 <div class="card">
 
-<div class="image">
+<img src="images/tusunami.jpg">
 
-PHOTO
+<h2>Tusunami</h2>
 
-</div>
-
-<h2 class="name">
-
-Tusunami
-
-</h2>
-
-<select class="size">
+<select>
 
 <option value="350">
 
-40 ML - 350 EGP
+40ML - 350 EGP
 
 </option>
 
 <option value="650">
 
-60 ML - 650 EGP
+60ML - 650 EGP
 
 </option>
 
 </select>
 
-<button
-class="add"
-onclick="addProduct('Tusunami',this)">
+<button onclick="addToCart('Tusunami',this)">
 
 Add To Cart
 
@@ -838,37 +629,27 @@ Add To Cart
 
 <div class="card">
 
-<div class="image">
+<img src="images/heaven.jpg">
 
-PHOTO
+<h2>Heaven</h2>
 
-</div>
-
-<h2 class="name">
-
-The Last Birthday
-
-</h2>
-
-<select class="size">
+<select>
 
 <option value="350">
 
-40 ML - 350 EGP
+40ML - 350 EGP
 
 </option>
 
 <option value="650">
 
-60 ML - 650 EGP
+60ML - 650 EGP
 
 </option>
 
 </select>
 
-<button
-class="add"
-onclick="addProduct('The Last Birthday',this)">
+<button onclick="addToCart('Heaven',this)">
 
 Add To Cart
 
@@ -878,197 +659,27 @@ Add To Cart
 
 <div class="card">
 
-<div class="image">
+<img src="images/hell.jpg">
 
-PHOTO
+<h2>Hell</h2>
 
-</div>
-
-<h2 class="name">
-
-Nuts
-
-</h2>
-
-<select class="size">
-
-<option value="400">
-
-40 ML - 400 EGP
-
-</option>
-
-<option value="700">
-
-60 ML - 700 EGP
-
-</option>
-
-</select>
-
-<button
-class="add"
-onclick="addProduct('Nuts',this)">
-
-Add To Cart
-
-</button>
-
-</div>
-
-<div class="card">
-
-<div class="image">
-
-PHOTO
-
-</div>
-
-<h2 class="name">
-
-Afternoon
-
-</h2>
-
-<select class="size">
-
-<option value="400">
-
-40 ML - 400 EGP
-
-</option>
-
-<option value="700">
-
-60 ML - 700 EGP
-
-</option>
-
-</select>
-
-<button
-class="add"
-onclick="addProduct('Afternoon',this)">
-
-Add To Cart
-
-</button>
-
-</div>
-
-<div class="card">
-
-<div class="image">
-
-PHOTO
-
-</div>
-
-<h2 class="name">
-
-Intensely
-
-</h2>
-
-<select class="size">
-
-<option value="400">
-
-40 ML - 400 EGP
-
-</option>
-
-<option value="700">
-
-60 ML - 700 EGP
-
-</option>
-
-</select>
-
-<button
-class="add"
-onclick="addProduct('Intensely',this)">
-
-Add To Cart
-
-</button>
-
-</div>
-
-<div class="card">
-
-<div class="image">
-
-PHOTO
-
-</div>
-
-<h2 class="name">
-
-Hell
-
-</h2>
-
-<select class="size">
+<select>
 
 <option value="350">
 
-40 ML - 350 EGP
+40ML - 350 EGP
 
 </option>
 
 <option value="650">
 
-60 ML - 650 EGP
+60ML - 650 EGP
 
 </option>
 
 </select>
 
-<button
-class="add"
-onclick="addProduct('Hell',this)">
-
-Add To Cart
-
-</button>
-
-</div>
-
-<div class="card">
-
-<div class="image">
-
-PHOTO
-
-</div>
-
-<h2 class="name">
-
-Heaven
-
-</h2>
-
-<select class="size">
-
-<option value="350">
-
-40 ML - 350 EGP
-
-</option>
-
-<option value="650">
-
-60 ML - 650 EGP
-
-</option>
-
-</select>
-
-<button
-class="add"
-onclick="addProduct('Heaven',this)">
+<button onclick="addToCart('Hell',this)">
 
 Add To Cart
 
@@ -1079,8 +690,16 @@ Add To Cart
 </div>
 
 </section>
+<!-- PART 3 -->
+
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
 
 <script>
+
+emailjs.init("5bfxJmBRr2Tv4w7ja");
+
+const SERVICE_ID="service_3okjoac";
+const TEMPLATE_ID="Mohameddyoussef252@gmail.comT";
 
 let cart=[];
 
@@ -1089,30 +708,34 @@ let discount=0;
 const promoCodes={
 
 YASSIN10:10,
-
 WELCOME15:15,
-
 TORAS20:20
 
 };
 
-function openMen(){
+function toggleCart(){
 
-landing.style.display="none";
-
-womenShop.style.display="none";
-
-menShop.style.display="block";
+document.getElementById("cart").classList.toggle("active");
 
 }
 
-function openWomen(){
+function showMen(){
 
 landing.style.display="none";
 
-menShop.style.display="none";
+women.style.display="none";
 
-womenShop.style.display="block";
+men.style.display="block";
+
+}
+
+function showWomen(){
+
+landing.style.display="none";
+
+men.style.display="none";
+
+women.style.display="block";
 
 }
 
@@ -1120,208 +743,77 @@ function goHome(){
 
 landing.style.display="flex";
 
-menShop.style.display="none";
+men.style.display="none";
 
-womenShop.style.display="none";
-
-}
-
-function toggleCart(){
-
-cart.classList.toggle("active");
+women.style.display="none";
 
 }
 
-function addProduct(name,btn){
+function addToCart(name,button){
 
-let select=btn.parentElement.querySelector(".size");
+const select=button.parentElement.querySelector("select");
 
-let price=Number(select.value);
+const price=Number(select.value);
 
-let size=select.options[select.selectedIndex].text;
+const size=select.options[select.selectedIndex].text;
+
+const found=cart.find(x=>x.name==name&&x.size==size);
+
+if(found){
+
+found.qty++;
+
+}else{
 
 cart.push({
 
-name,
+name:name,
 
-price,
+size:size,
 
-size
+price:price,
+
+qty:1
 
 });
 
-updateCart();
+}
+
+saveCart();
+
+renderCart();
 
 }
 
-function updateCart(){
+function renderCart(){
 
 let html="";
 
 let total=0;
 
-cart.forEach(item=>{
+cart.forEach((item,index)=>{
 
 html+=`
 
 <div class="cartItem">
 
-<div>
+<b>${item.name}</b><br>
 
-<b>${item.name}</b>
-
-<br>
-
-${item.size}
-
-</div>
-
-<div>
+${item.size}<br>
 
 ${item.price} EGP
 
-</div>
+<br><br>
 
-</div>
+<button onclick="minus(${index})">-</button>
 
-`;
+${item.qty}
 
-total+=item.price;
+<button onclick="plus(${index})">+</button>
 
-});
+<button onclick="removeItem(${index})">
 
-total=total-(total*discount/100);
-
-document.getElementById("cartItems").innerHTML=html||"Your cart is empty.";
-
-document.getElementById("total").innerHTML=total;
-
-document.getElementById("cartCount").innerHTML=cart.length;
-
-}
-
-function applyPromo(){
-
-let code=document.getElementById("promoCode").value.toUpperCase();
-
-if(promoCodes[code]){
-
-discount=promoCodes[code];
-
-alert("Promo Applied! "+discount+"% OFF");
-
-}else{
-
-discount=0;
-
-alert("Invalid Promo Code");
-
-}
-
-updateCart();
-
-}
-<!-- ========================= -->
-<!-- PART 4A / 4 -->
-<!-- Continue after Part 3 -->
-<!-- ========================= -->
-
-const SERVICE_ID="service_3okjoac";
-const PUBLIC_KEY="5bfxJmBRr2Tv4w7ja";
-const TEMPLATE_ID="PUT_YOUR_TEMPLATE_ID_HERE";
-
-emailjs.init(PUBLIC_KEY);
-
-function checkout(){
-
-if(cart.length==0){
-
-alert("Your cart is empty.");
-
-return;
-
-}
-
-let form=`
-
-<div id="checkoutBox"
-
-style="
-
-position:fixed;
-top:50%;
-left:50%;
-
-transform:translate(-50%,-50%);
-
-background:#111;
-
-padding:30px;
-
-width:420px;
-
-border:2px solid #C7A84B;
-
-border-radius:18px;
-
-z-index:9999;
-
-">
-
-<h2 style="color:#C7A84B">
-
-Checkout
-
-</h2>
-
-<input id="cName"
-
-placeholder="Full Name"
-
-style="width:100%;
-padding:12px;
-margin-top:15px;">
-
-<input id="cPhone"
-
-placeholder="Phone Number"
-
-style="width:100%;
-padding:12px;
-margin-top:12px;">
-
-<input id="cEmail"
-
-placeholder="Email"
-
-style="width:100%;
-padding:12px;
-margin-top:12px;">
-
-<input id="cAddress"
-
-placeholder="Address"
-
-style="width:100%;
-padding:12px;
-margin-top:12px;">
-
-<button
-
-onclick="sendOrder()"
-
-style="
-
-width:100%;
-margin-top:20px;
-padding:14px;
-background:#C7A84B;
-border:none;
-cursor:pointer;
-
-">
-
-Place Order
+Remove
 
 </button>
 
@@ -1329,37 +821,209 @@ Place Order
 
 `;
 
-document.body.insertAdjacentHTML("beforeend",form);
-
-}
-
-function sendOrder(){
-
-let items="";
-
-let total=0;
-
-cart.forEach(p=>{
-
-items+=
-
-p.name+
-
-" | "+
-
-p.size+
-
-" | "+
-
-p.price+
-
-" EGP\n";
-
-total+=p.price;
+total+=item.price*item.qty;
 
 });
 
-total=total-(total*discount/100);
+let finalTotal=total-(total*discount/100);
+
+cartItems.innerHTML=html||"Your cart is empty.";
+
+total.innerHTML=finalTotal;
+
+cartCount.innerHTML=cart.length;
+
+}
+
+function plus(i){
+
+cart[i].qty++;
+
+saveCart();
+
+renderCart();
+
+}
+
+function minus(i){
+
+cart[i].qty--;
+
+if(cart[i].qty<=0){
+
+cart.splice(i,1);
+
+}
+
+saveCart();
+
+renderCart();
+
+}
+
+function removeItem(i){
+
+cart.splice(i,1);
+
+saveCart();
+
+renderCart();
+
+}
+
+function applyPromo(){
+
+const code=promo.value.trim().toUpperCase();
+
+if(promoCodes[code]){
+
+discount=promoCodes[code];
+
+alert("Discount Applied!");
+
+}else{
+
+discount=0;
+
+alert("Invalid Code");
+
+}
+
+renderCart();
+
+}
+
+function saveCart(){
+
+localStorage.setItem(
+
+"torasCart",
+
+JSON.stringify(cart)
+
+);
+
+}
+
+window.onload=()=>{
+
+const saved=
+
+localStorage.getItem("torasCart");
+
+if(saved){
+
+cart=JSON.parse(saved);
+
+renderCart();
+
+}
+
+};
+
+function checkout(){
+
+if(cart.length==0){
+
+alert("Cart Empty");
+
+return;
+
+}
+let checkoutHTML=`
+
+<div id="checkoutPopup"
+
+style="
+
+position:fixed;
+top:50%;
+left:50%;
+transform:translate(-50%,-50%);
+
+width:420px;
+
+background:#111;
+
+padding:30px;
+
+border:2px solid gold;
+
+border-radius:20px;
+
+z-index:9999;
+
+">
+
+<h2 style="color:#c8a04d;text-align:center;">
+
+Checkout
+
+</h2>
+
+<input id="customerName" placeholder="Full Name">
+
+<input id="customerPhone" placeholder="Phone Number">
+
+<input id="customerEmail" placeholder="Email">
+
+<input id="customerAddress" placeholder="Address">
+
+<button onclick="placeOrder()">
+
+Place Order
+
+</button>
+
+<button
+
+style="margin-top:10px;background:#333;color:white;"
+
+onclick="document.getElementById('checkoutPopup').remove()">
+
+Cancel
+
+</button>
+
+</div>
+
+`;
+
+document.body.insertAdjacentHTML("beforeend",checkoutHTML);
+
+}
+
+function placeOrder(){
+
+let items="";
+
+let totalPrice=0;
+
+cart.forEach(item=>{
+
+items+=
+
+`${item.name}
+
+${item.size}
+
+Qty: ${item.qty}
+
+Price: ${item.price} EGP
+
+--------------------
+
+`;
+
+totalPrice+=item.price*item.qty;
+
+});
+
+let finalTotal=
+
+totalPrice-
+
+(totalPrice*discount/100);
 
 emailjs.send(
 
@@ -1369,47 +1033,55 @@ TEMPLATE_ID,
 
 {
 
-name:
+to_email:"Mohameddyoussef252@gmail.com",
 
-document.getElementById("cName").value,
+customer_name:
 
-phone:
+document.getElementById("customerName").value,
 
-document.getElementById("cPhone").value,
+customer_phone:
 
-email:
+document.getElementById("customerPhone").value,
 
-document.getElementById("cEmail").value,
+customer_email:
 
-address:
+document.getElementById("customerEmail").value,
 
-document.getElementById("cAddress").value,
+customer_address:
+
+document.getElementById("customerAddress").value,
 
 items:items,
 
-total:total
+discount:discount+"%",
+
+total:finalTotal
 
 }
 
 )
-.then(()=>{
-    alert("Order sent successfully!");
+
+.then(function(){
+
+alert("Order Sent Successfully!");
 
 cart=[];
 
 discount=0;
 
-document.getElementById("promoCode").value="";
+promo.value="";
 
-updateCart();
+localStorage.removeItem("torasCart");
 
-document.getElementById("checkoutBox").remove();
+renderCart();
+
+document.getElementById("checkoutPopup").remove();
 
 })
 
-.catch((error)=>{
+.catch(function(error){
 
-alert("Failed to send order.");
+alert("Failed To Send Order");
 
 console.log(error);
 
@@ -1419,10 +1091,207 @@ console.log(error);
 
 </script>
 
-<script
-src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
-</script>
-
 </body>
 
 </html>
+<!-- ===== PART 5 (BONUS FEATURES) ===== -->
+
+<!-- Floating WhatsApp Button -->
+<a href="https://wa.me/201234567890" target="_blank" id="whatsappBtn">
+    💬
+</a>
+
+<style>
+#whatsappBtn{
+position:fixed;
+bottom:20px;
+right:20px;
+width:65px;
+height:65px;
+background:#25D366;
+border-radius:50%;
+display:flex;
+align-items:center;
+justify-content:center;
+font-size:32px;
+text-decoration:none;
+box-shadow:0 0 20px rgba(37,211,102,.5);
+z-index:9999;
+transition:.3s;
+}
+
+#whatsappBtn:hover{
+transform:scale(1.1);
+}
+</style>
+
+<script>
+
+// Search Products
+function searchProducts(){
+
+let value=document.getElementById("search").value.toLowerCase();
+
+document.querySelectorAll(".card").forEach(card=>{
+
+let name=card.querySelector("h2").innerText.toLowerCase();
+
+card.style.display=name.includes(value)?"block":"none";
+
+});
+
+}
+
+// Cart Counter Animation
+function animateCart(){
+
+cartCount.style.transform="scale(1.4)";
+
+setTimeout(()=>{
+
+cartCount.style.transform="scale(1)";
+
+},200);
+
+}
+
+// Call animation whenever cart updates
+const oldRender=renderCart;
+
+renderCart=function(){
+
+oldRender();
+
+animateCart();
+
+}
+
+// Simple Welcome Popup
+window.addEventListener("load",()=>{
+
+setTimeout(()=>{
+
+alert("✨ Welcome to TORAS Fragrances");
+
+},700);
+
+});
+
+</script>
+<!-- ===================== -->
+<!-- PART 6 - FINAL POLISH -->
+<!-- ===================== -->
+
+<footer style="margin-top:80px;background:#090909;padding:50px;text-align:center;border-top:2px solid gold;">
+
+<h2 style="font-family:Cinzel;color:gold;">
+TORAS FRAGRANCES
+</h2>
+
+<p style="margin-top:20px;color:#aaa;">
+Luxury Perfumes • Premium Quality • Long Lasting
+</p>
+
+<br>
+
+<a href="https://instagram.com/"
+style="color:gold;text-decoration:none;font-size:20px;">
+Instagram
+</a>
+
+&nbsp;&nbsp;&nbsp;
+
+<a href="https://wa.me/201234567890"
+style="color:gold;text-decoration:none;font-size:20px;">
+WhatsApp
+</a>
+
+<br><br>
+
+<p style="color:#666;">
+© 2026 TORAS Fragrances. All Rights Reserved.
+</p>
+
+</footer>
+
+<script>
+
+// Smooth Fade Between Pages
+document.querySelectorAll("button").forEach(btn=>{
+
+btn.addEventListener("mouseenter",()=>{
+
+btn.style.boxShadow="0 0 20px gold";
+
+});
+
+btn.addEventListener("mouseleave",()=>{
+
+btn.style.boxShadow="none";
+
+});
+
+});
+
+// Fade Cards
+
+const cards=document.querySelectorAll(".card");
+
+const observer=new IntersectionObserver(entries=>{
+
+entries.forEach(entry=>{
+
+if(entry.isIntersecting){
+
+entry.target.style.opacity="1";
+entry.target.style.transform="translateY(0px)";
+
+}
+
+});
+
+});
+
+cards.forEach(card=>{
+
+card.style.opacity="0";
+card.style.transform="translateY(50px)";
+card.style.transition=".6s";
+
+observer.observe(card);
+
+});
+
+// Loading Screen
+
+window.onload=()=>{
+
+const loader=document.createElement("div");
+
+loader.style.position="fixed";
+loader.style.top="0";
+loader.style.left="0";
+loader.style.width="100%";
+loader.style.height="100%";
+loader.style.background="#050505";
+loader.style.display="flex";
+loader.style.justifyContent="center";
+loader.style.alignItems="center";
+loader.style.color="gold";
+loader.style.fontSize="40px";
+loader.style.fontFamily="Cinzel";
+loader.style.zIndex="999999";
+
+loader.innerHTML="TORAS";
+
+document.body.appendChild(loader);
+
+setTimeout(()=>{
+
+loader.remove();
+
+},1200);
+
+};
+
+</script>
