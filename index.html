@@ -3,7 +3,7 @@
 <head>
 
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
 
 <title>TORAS Fragrances</title>
 
@@ -16,6 +16,9 @@ margin:0;
 padding:0;
 box-sizing:border-box;
 font-family:Poppins,sans-serif;
+}
+
+html{
 scroll-behavior:smooth;
 }
 
@@ -30,7 +33,7 @@ width:8px;
 }
 
 ::-webkit-scrollbar-thumb{
-background:#c8a04d;
+background:#c9a24d;
 border-radius:50px;
 }
 
@@ -42,21 +45,24 @@ top:0;
 left:0;
 
 width:100%;
+
 height:80px;
 
-background:rgba(0,0,0,.75);
+background:rgba(0,0,0,.8);
 
-backdrop-filter:blur(12px);
+backdrop-filter:blur(10px);
 
 display:flex;
 
-align-items:center;
-
 justify-content:space-between;
+
+align-items:center;
 
 padding:0 60px;
 
 z-index:999;
+
+border-bottom:1px solid rgba(201,162,77,.25);
 
 }
 
@@ -68,7 +74,7 @@ font-size:34px;
 
 letter-spacing:5px;
 
-color:#c8a04d;
+color:#c9a24d;
 
 }
 
@@ -76,13 +82,13 @@ nav ul{
 
 display:flex;
 
-gap:35px;
-
 list-style:none;
+
+gap:35px;
 
 }
 
-nav ul li{
+nav li{
 
 cursor:pointer;
 
@@ -90,15 +96,15 @@ transition:.3s;
 
 }
 
-nav ul li:hover{
+nav li:hover{
 
-color:#c8a04d;
+color:#c9a24d;
 
 }
 
 .cartButton{
 
-background:#c8a04d;
+background:#c9a24d;
 
 color:black;
 
@@ -110,17 +116,11 @@ font-weight:bold;
 
 cursor:pointer;
 
-transition:.3s;
-
-}
-
-.cartButton:hover{
-
-transform:scale(1.05);
-
 }
 
 #landing{
+
+width:100%;
 
 height:100vh;
 
@@ -138,15 +138,15 @@ justify-content:center;
 
 align-items:center;
 
-font-family:Cinzel,serif;
-
 font-size:90px;
+
+font-family:Cinzel,serif;
 
 cursor:pointer;
 
 transition:.4s;
 
-position:relative;
+user-select:none;
 
 }
 
@@ -154,7 +154,7 @@ position:relative;
 
 background:#111;
 
-color:#c8a04d;
+color:#c9a24d;
 
 }
 
@@ -162,9 +162,9 @@ color:#c8a04d;
 
 width:2px;
 
-background:#c8a04d;
+background:#c9a24d;
 
-box-shadow:0 0 20px gold;
+box-shadow:0 0 20px #c9a24d;
 
 }
 
@@ -172,21 +172,21 @@ box-shadow:0 0 20px gold;
 
 display:none;
 
-padding:140px 60px;
+padding:130px 60px 70px;
 
 }
 
 .title{
 
+font-family:Cinzel,serif;
+
 font-size:42px;
 
 text-align:center;
 
-font-family:Cinzel,serif;
-
-color:#c8a04d;
-
 margin-bottom:40px;
+
+color:#c9a24d;
 
 }
 
@@ -194,7 +194,7 @@ margin-bottom:40px;
 
 display:grid;
 
-grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
 
 gap:30px;
 
@@ -204,21 +204,21 @@ gap:30px;
 
 background:#111;
 
-border:1px solid #c8a04d;
+border:1px solid #c9a24d;
 
 border-radius:18px;
 
 padding:20px;
 
-transition:.4s;
+transition:.3s;
 
 }
 
 .card:hover{
 
-transform:translateY(-10px);
+transform:translateY(-8px);
 
-box-shadow:0 0 30px rgba(200,160,77,.35);
+box-shadow:0 0 30px rgba(201,162,77,.25);
 
 }
 
@@ -238,9 +238,9 @@ margin-bottom:15px;
 
 .card h2{
 
-margin-bottom:15px;
-
 font-family:Cinzel,serif;
+
+margin-bottom:12px;
 
 }
 
@@ -250,15 +250,15 @@ width:100%;
 
 padding:12px;
 
-margin-top:10px;
-
-background:#181818;
+background:#191919;
 
 color:white;
 
-border:1px solid #c8a04d;
+border:1px solid #c9a24d;
 
 border-radius:8px;
+
+margin-top:10px;
 
 }
 
@@ -272,15 +272,15 @@ margin-top:15px;
 
 border:none;
 
-background:#c8a04d;
+background:#c9a24d;
 
 color:black;
 
 font-weight:bold;
 
-cursor:pointer;
-
 border-radius:10px;
+
+cursor:pointer;
 
 transition:.3s;
 
@@ -296,23 +296,23 @@ transform:scale(1.03);
 
 position:fixed;
 
-right:-450px;
-
 top:0;
 
-width:430px;
+right:-420px;
+
+width:400px;
 
 height:100vh;
 
 background:#111;
 
+border-left:2px solid #c9a24d;
+
 padding:25px;
 
-transition:.4s;
+transition:.35s;
 
 overflow:auto;
-
-border-left:2px solid #c8a04d;
 
 z-index:2000;
 
@@ -326,11 +326,11 @@ right:0;
 
 .cartTitle{
 
-font-size:30px;
-
 font-family:Cinzel,serif;
 
-color:#c8a04d;
+font-size:28px;
+
+color:#c9a24d;
 
 margin-bottom:20px;
 
@@ -338,19 +338,19 @@ margin-bottom:20px;
 
 .cartItem{
 
-border-bottom:1px solid #333;
-
 padding:15px 0;
+
+border-bottom:1px solid #333;
 
 }
 
 .total{
 
-font-size:24px;
-
 margin-top:20px;
 
-color:#c8a04d;
+font-size:24px;
+
+color:#c9a24d;
 
 }
 
@@ -364,15 +364,16 @@ margin-top:12px;
 
 background:#1a1a1a;
 
-border:1px solid #c8a04d;
-
-color:white;
+border:1px solid #c9a24d;
 
 border-radius:8px;
+
+color:white;
 
 }
 
 </style>
+
 </head>
 
 <body>
@@ -403,8 +404,6 @@ TORAS
 
 </nav>
 
-<!-- LANDING -->
-
 <section id="landing">
 
 <div class="side" onclick="showMen()">
@@ -422,16 +421,15 @@ WOMEN
 </div>
 
 </section>
-
 <!-- CART -->
 
 <div id="cart">
 
-<h1 class="cartTitle">
+<h2 class="cartTitle">
 
 Shopping Cart
 
-</h1>
+</h2>
 
 <div id="cartItems">
 
@@ -439,12 +437,8 @@ Your cart is empty.
 
 </div>
 
-<br>
-
 <input
-
 id="promo"
-
 placeholder="Discount Code">
 
 <button onclick="applyPromo()">
@@ -456,14 +450,7 @@ Apply Code
 <h2 class="total">
 
 Total:
-
-<span id="total">
-
-0
-
-</span>
-
-EGP
+<span id="total">0</span> EGP
 
 </h2>
 
@@ -477,9 +464,7 @@ Checkout
 
 <!-- MEN -->
 
-<section
-id="men"
-class="shop">
+<section id="men" class="shop">
 
 <h1 class="title">
 
@@ -496,25 +481,13 @@ MEN COLLECTION
 <h2>Youssef</h2>
 
 <select>
-
-<option value="350">
-
-40ML - 350 EGP
-
-</option>
-
-<option value="650">
-
-60ML - 650 EGP
-
-</option>
+<option value="350">40ML - 350 EGP</option>
+<option value="650">60ML - 650 EGP</option>
 
 </select>
 
 <button onclick="addToCart('Youssef',this)">
-
 Add To Cart
-
 </button>
 
 </div>
@@ -527,24 +500,13 @@ Add To Cart
 
 <select>
 
-<option value="450">
-
-40ML - 450 EGP
-
-</option>
-
-<option value="800">
-
-60ML - 800 EGP
-
-</option>
+<option value="450">40ML - 450 EGP</option>
+<option value="800">60ML - 800 EGP</option>
 
 </select>
 
 <button onclick="addToCart('Dravon',this)">
-
 Add To Cart
-
 </button>
 
 </div>
@@ -557,24 +519,13 @@ Add To Cart
 
 <select>
 
-<option value="400">
-
-40ML - 400 EGP
-
-</option>
-
-<option value="700">
-
-60ML - 700 EGP
-
-</option>
+<option value="400">40ML - 400 EGP</option>
+<option value="700">60ML - 700 EGP</option>
 
 </select>
 
 <button onclick="addToCart('Tobacco',this)">
-
 Add To Cart
-
 </button>
 
 </div>
@@ -583,11 +534,7 @@ Add To Cart
 
 </section>
 
-<!-- WOMEN -->
-
-<section
-id="women"
-class="shop">
+<section id="women" class="shop">
 
 <h1 class="title">
 
@@ -605,24 +552,13 @@ WOMEN COLLECTION
 
 <select>
 
-<option value="350">
-
-40ML - 350 EGP
-
-</option>
-
-<option value="650">
-
-60ML - 650 EGP
-
-</option>
+<option value="350">40ML - 350 EGP</option>
+<option value="650">60ML - 650 EGP</option>
 
 </select>
 
 <button onclick="addToCart('Tusunami',this)">
-
 Add To Cart
-
 </button>
 
 </div>
@@ -635,24 +571,13 @@ Add To Cart
 
 <select>
 
-<option value="350">
-
-40ML - 350 EGP
-
-</option>
-
-<option value="650">
-
-60ML - 650 EGP
-
-</option>
+<option value="350">40ML - 350 EGP</option>
+<option value="650">60ML - 650 EGP</option>
 
 </select>
 
 <button onclick="addToCart('Heaven',this)">
-
 Add To Cart
-
 </button>
 
 </div>
@@ -665,24 +590,13 @@ Add To Cart
 
 <select>
 
-<option value="350">
-
-40ML - 350 EGP
-
-</option>
-
-<option value="650">
-
-60ML - 650 EGP
-
-</option>
+<option value="350">40ML - 350 EGP</option>
+<option value="650">60ML - 650 EGP</option>
 
 </select>
 
 <button onclick="addToCart('Hell',this)">
-
 Add To Cart
-
 </button>
 
 </div>
@@ -699,54 +613,39 @@ Add To Cart
 emailjs.init("5bfxJmBRr2Tv4w7ja");
 
 const SERVICE_ID="service_3okjoac";
-const TEMPLATE_ID = "template_z22dy7i";
+const TEMPLATE_ID="template_z22dy7i";
 
 let cart=[];
 
 let discount=0;
 
 const promoCodes={
-
 YASSIN10:10,
 WELCOME15:15,
 TORAS20:20
-
+me:90,
 };
 
 function toggleCart(){
-
 document.getElementById("cart").classList.toggle("active");
-
 }
 
 function showMen(){
-
-landing.style.display="none";
-
-women.style.display="none";
-
-men.style.display="block";
-
+document.getElementById("landing").style.display="none";
+document.getElementById("women").style.display="none";
+document.getElementById("men").style.display="block";
 }
 
 function showWomen(){
-
-landing.style.display="none";
-
-men.style.display="none";
-
-women.style.display="block";
-
+document.getElementById("landing").style.display="none";
+document.getElementById("men").style.display="none";
+document.getElementById("women").style.display="block";
 }
 
 function goHome(){
-
-landing.style.display="flex";
-
-men.style.display="none";
-
-women.style.display="none";
-
+document.getElementById("landing").style.display="flex";
+document.getElementById("men").style.display="none";
+document.getElementById("women").style.display="none";
 }
 
 function addToCart(name,button){
@@ -757,24 +656,19 @@ const price=Number(select.value);
 
 const size=select.options[select.selectedIndex].text;
 
-const found=cart.find(x=>x.name==name&&x.size==size);
+const item=cart.find(x=>x.name===name&&x.size===size);
 
-if(found){
+if(item){
 
-found.qty++;
+item.qty++;
 
 }else{
 
 cart.push({
-
 name:name,
-
 size:size,
-
 price:price,
-
 qty:1
-
 });
 
 }
@@ -787,9 +681,15 @@ renderCart();
 
 function renderCart(){
 
+const cartItems=document.getElementById("cartItems");
+
+const totalElement=document.getElementById("total");
+
+const cartCount=document.getElementById("cartCount");
+
 let html="";
 
-let total=0;
+let totalPrice=0;
 
 cart.forEach((item,index)=>{
 
@@ -805,7 +705,7 @@ ${item.price} EGP
 
 <br><br>
 
-<button onclick="minus(${index})">-</button>
+<button onclick="minus(${index})">−</button>
 
 ${item.qty}
 
@@ -821,17 +721,17 @@ Remove
 
 `;
 
-total+=item.price*item.qty;
+totalPrice+=item.price*item.qty;
 
 });
 
-let finalTotal=total-(total*discount/100);
+let finalTotal=totalPrice-(totalPrice*(discount/100));
 
 cartItems.innerHTML=html||"Your cart is empty.";
 
-document.getElementById("total").innerHTML=finalTotal;
+totalElement.textContent=finalTotal.toFixed(0);
 
-cartCount.innerHTML=cart.length;
+cartCount.textContent=cart.reduce((a,b)=>a+b.qty,0);
 
 }
 
@@ -873,19 +773,19 @@ renderCart();
 
 function applyPromo(){
 
-const code=promo.value.trim().toUpperCase();
+const code=document.getElementById("promo").value.trim().toUpperCase();
 
 if(promoCodes[code]){
 
 discount=promoCodes[code];
 
-alert("Discount Applied!");
+alert("Promo code applied!");
 
 }else{
 
 discount=0;
 
-alert("Invalid Code");
+alert("Invalid promo code.");
 
 }
 
@@ -895,21 +795,13 @@ renderCart();
 
 function saveCart(){
 
-localStorage.setItem(
-
-"torasCart",
-
-JSON.stringify(cart)
-
-);
+localStorage.setItem("torasCart",JSON.stringify(cart));
 
 }
 
-window.onload=()=>{
+window.addEventListener("load",()=>{
 
-const saved=
-
-localStorage.getItem("torasCart");
+const saved=localStorage.getItem("torasCart");
 
 if(saved){
 
@@ -919,18 +811,26 @@ renderCart();
 
 }
 
-};
+});
+<!-- PART 4 -->
 
 function checkout(){
 
-if(cart.length==0){
+if(cart.length===0){
 
-alert("Cart Empty");
+alert("Your cart is empty.");
 
 return;
 
 }
-let checkoutHTML=`
+
+if(document.getElementById("checkoutPopup")){
+
+document.getElementById("checkoutPopup").remove();
+
+}
+
+const popup=`
 
 <div id="checkoutPopup"
 
@@ -940,22 +840,16 @@ position:fixed;
 top:50%;
 left:50%;
 transform:translate(-50%,-50%);
-
 width:420px;
-
 background:#111;
-
-padding:30px;
-
-border:2px solid gold;
-
-border-radius:20px;
-
+padding:25px;
+border:2px solid #c9a24d;
+border-radius:18px;
 z-index:9999;
 
 ">
 
-<h2 style="color:#c8a04d;text-align:center;">
+<h2 style="color:#c9a24d;text-align:center;font-family:Cinzel;">
 
 Checkout
 
@@ -976,9 +870,7 @@ Place Order
 </button>
 
 <button
-
-style="margin-top:10px;background:#333;color:white;"
-
+style="background:#333;color:white;margin-top:10px;"
 onclick="document.getElementById('checkoutPopup').remove()">
 
 Cancel
@@ -989,7 +881,7 @@ Cancel
 
 `;
 
-document.body.insertAdjacentHTML("beforeend",checkoutHTML);
+document.body.insertAdjacentHTML("beforeend",popup);
 
 }
 
@@ -1001,17 +893,10 @@ let totalPrice=0;
 
 cart.forEach(item=>{
 
-items+=
-
-`${item.name}
-
+items+=`${item.name}
 ${item.size}
-
 Qty: ${item.qty}
-
 Price: ${item.price} EGP
-
---------------------
 
 `;
 
@@ -1019,11 +904,7 @@ totalPrice+=item.price*item.qty;
 
 });
 
-let finalTotal=
-
-totalPrice-
-
-(totalPrice*discount/100);
+const finalTotal=totalPrice-(totalPrice*(discount/100));
 
 emailjs.send(
 
@@ -1035,21 +916,13 @@ TEMPLATE_ID,
 
 to_email:"Mohameddyoussef252@gmail.com",
 
-customer_name:
+customer_name:document.getElementById("customerName").value,
 
-document.getElementById("customerName").value,
+customer_phone:document.getElementById("customerPhone").value,
 
-customer_phone:
+customer_email:document.getElementById("customerEmail").value,
 
-document.getElementById("customerPhone").value,
-
-customer_email:
-
-document.getElementById("customerEmail").value,
-
-customer_address:
-
-document.getElementById("customerAddress").value,
+customer_address:document.getElementById("customerAddress").value,
 
 items:items,
 
@@ -1061,7 +934,7 @@ total:finalTotal
 
 )
 
-.then(function(){
+.then(()=>{
 
 alert("Order Sent Successfully!");
 
@@ -1069,7 +942,7 @@ cart=[];
 
 discount=0;
 
-promo.value="";
+document.getElementById("promo").value="";
 
 localStorage.removeItem("torasCart");
 
@@ -1079,30 +952,59 @@ document.getElementById("checkoutPopup").remove();
 
 })
 
-.catch(function(error){
+.catch((error)=>{
 
-alert("Failed To Send Order");
+console.error(error);
 
-console.log(error);
+alert("Failed to send order.");
 
 });
 
 }
+<!-- PART 5 -->
 
-</script>
+<footer style="margin-top:80px;background:#090909;padding:50px;text-align:center;border-top:2px solid #c9a24d;">
 
-</body>
+<h2 style="font-family:Cinzel;color:#c9a24d;">
+TORAS FRAGRANCES
+</h2>
 
-</html>
-<!-- ===== PART 5 (BONUS FEATURES) ===== -->
+<p style="margin-top:20px;color:#aaa;">
+Luxury Perfumes • Premium Quality • Long Lasting
+</p>
 
-<!-- Floating WhatsApp Button -->
-<a href="https://wa.me/201234567890" target="_blank" id="whatsappBtn">
-    💬
+<br>
+
+<a href="https://instagram.com/"
+style="color:#c9a24d;text-decoration:none;font-size:18px;">
+Instagram
 </a>
 
-<style>
-#whatsappBtn{
+&nbsp;&nbsp;&nbsp;
+
+<a href="https://wa.me/201234567890"
+style="color:#c9a24d;text-decoration:none;font-size:18px;">
+WhatsApp
+</a>
+
+<br><br>
+
+<p style="color:#666;">
+© 2026 TORAS Fragrances. All Rights Reserved.
+</p>
+
+</footer>
+
+<a
+
+href="https://wa.me/201234567890"
+
+target="_blank"
+
+id="whatsapp"
+
+style="
+
 position:fixed;
 bottom:20px;
 right:20px;
@@ -1115,127 +1017,25 @@ align-items:center;
 justify-content:center;
 font-size:32px;
 text-decoration:none;
-box-shadow:0 0 20px rgba(37,211,102,.5);
+color:white;
+box-shadow:0 0 20px rgba(37,211,102,.4);
 z-index:9999;
-transition:.3s;
-}
 
-#whatsappBtn:hover{
-transform:scale(1.1);
-}
-</style>
+">
+
+💬
+
+</a>
 
 <script>
-
-// Search Products
-function searchProducts(){
-
-let value=document.getElementById("search").value.toLowerCase();
 
 document.querySelectorAll(".card").forEach(card=>{
 
-let name=card.querySelector("h2").innerText.toLowerCase();
-
-card.style.display=name.includes(value)?"block":"none";
-
-});
-
-}
-
-// Cart Counter Animation
-function animateCart(){
-
-cartCount.style.transform="scale(1.4)";
-
-setTimeout(()=>{
-
-cartCount.style.transform="scale(1)";
-
-},200);
-
-}
-
-// Call animation whenever cart updates
-const oldRender=renderCart;
-
-renderCart=function(){
-
-oldRender();
-
-animateCart();
-
-}
-
-// Simple Welcome Popup
-window.addEventListener("load",()=>{
-
-setTimeout(()=>{
-
-alert("✨ Welcome to TORAS Fragrances");
-
-},700);
+card.style.opacity="0";
+card.style.transform="translateY(40px)";
+card.style.transition=".6s";
 
 });
-
-</script>
-<!-- ===================== -->
-<!-- PART 6 - FINAL POLISH -->
-<!-- ===================== -->
-
-<footer style="margin-top:80px;background:#090909;padding:50px;text-align:center;border-top:2px solid gold;">
-
-<h2 style="font-family:Cinzel;color:gold;">
-TORAS FRAGRANCES
-</h2>
-
-<p style="margin-top:20px;color:#aaa;">
-Luxury Perfumes • Premium Quality • Long Lasting
-</p>
-
-<br>
-
-<a href="https://instagram.com/"
-style="color:gold;text-decoration:none;font-size:20px;">
-Instagram
-</a>
-
-&nbsp;&nbsp;&nbsp;
-
-<a href="https://wa.me/201234567890"
-style="color:gold;text-decoration:none;font-size:20px;">
-WhatsApp
-</a>
-
-<br><br>
-
-<p style="color:#666;">
-© 2026 TORAS Fragrances. All Rights Reserved.
-</p>
-
-</footer>
-
-<script>
-
-// Smooth Fade Between Pages
-document.querySelectorAll("button").forEach(btn=>{
-
-btn.addEventListener("mouseenter",()=>{
-
-btn.style.boxShadow="0 0 20px gold";
-
-});
-
-btn.addEventListener("mouseleave",()=>{
-
-btn.style.boxShadow="none";
-
-});
-
-});
-
-// Fade Cards
-
-const cards=document.querySelectorAll(".card");
 
 const observer=new IntersectionObserver(entries=>{
 
@@ -1252,21 +1052,23 @@ entry.target.style.transform="translateY(0px)";
 
 });
 
-cards.forEach(card=>{
-
-card.style.opacity="0";
-card.style.transform="translateY(50px)";
-card.style.transition=".6s";
+document.querySelectorAll(".card").forEach(card=>{
 
 observer.observe(card);
 
 });
 
-// Loading Screen
+</script>
+<!-- PART 6 -->
 
-window.onload=()=>{
+<script>
+
+// Luxury Loading Screen
+window.addEventListener("load",()=>{
 
 const loader=document.createElement("div");
+
+loader.id="loader";
 
 loader.style.position="fixed";
 loader.style.top="0";
@@ -1277,21 +1079,94 @@ loader.style.background="#050505";
 loader.style.display="flex";
 loader.style.justifyContent="center";
 loader.style.alignItems="center";
-loader.style.color="gold";
-loader.style.fontSize="40px";
 loader.style.fontFamily="Cinzel";
+loader.style.fontSize="42px";
+loader.style.color="#c9a24d";
 loader.style.zIndex="999999";
-
 loader.innerHTML="TORAS";
 
 document.body.appendChild(loader);
 
 setTimeout(()=>{
 
+loader.style.opacity="0";
+loader.style.transition=".5s";
+
+setTimeout(()=>{
+
 loader.remove();
 
-},1200);
+},500);
 
-};
+},1000);
+
+});
+
+// Gold Button Hover
+document.addEventListener("mouseover",e=>{
+
+if(e.target.tagName==="BUTTON"){
+
+e.target.style.boxShadow="0 0 20px rgba(201,162,77,.6)";
+
+}
+
+});
+
+document.addEventListener("mouseout",e=>{
+
+if(e.target.tagName==="BUTTON"){
+
+e.target.style.boxShadow="none";
+
+}
+
+});
+
+// Close Cart with ESC
+document.addEventListener("keydown",e=>{
+
+if(e.key==="Escape"){
+
+document.getElementById("cart").classList.remove("active");
+
+const popup=document.getElementById("checkoutPopup");
+
+if(popup){
+
+popup.remove();
+
+}
+
+}
+
+});
+
+// Close Cart When Clicking Outside
+document.addEventListener("click",function(e){
+
+const cart=document.getElementById("cart");
+
+const cartBtn=document.querySelector(".cartButton");
+
+if(
+
+cart.classList.contains("active") &&
+
+!cart.contains(e.target) &&
+
+!cartBtn.contains(e.target)
+
+){
+
+cart.classList.remove("active");
+
+}
+
+});
 
 </script>
+
+</body>
+
+</html>
