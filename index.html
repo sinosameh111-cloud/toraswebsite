@@ -59,88 +59,7 @@ padding:0 60px;
 z-index:999;
 
 }
-/* MOBILE RESPONSIVE */
 
-@media (max-width:768px){
-
-nav{
-padding:0 20px;
-height:70px;
-}
-
-.logo{
-font-size:24px;
-}
-
-nav ul{
-display:none;
-}
-
-.cartButton{
-padding:10px 15px;
-font-size:14px;
-}
-
-
-#landing{
-height:100vh;
-flex-direction:column;
-}
-
-
-.side{
-font-size:45px;
-}
-
-
-.divider{
-width:100%;
-height:2px;
-}
-
-
-.shop{
-padding:100px 20px 50px;
-}
-
-
-.title{
-font-size:32px;
-}
-
-
-.products{
-grid-template-columns:1fr;
-}
-
-
-.card img{
-height:220px;
-}
-
-
-#cart{
-width:100%;
-right:-100%;
-}
-
-
-#cart.active{
-right:0;
-}
-
-
-button{
-font-size:15px;
-}
-
-
-input{
-font-size:16px;
-}
-
-
-}
 .logo{
 
 font-family:Cinzel,serif;
@@ -780,7 +699,8 @@ Add To Cart
 emailjs.init("5bfxJmBRr2Tv4w7ja");
 
 const SERVICE_ID="service_3okjoac";
-const TEMPLATE_ID = "template_z22dy7i";
+const TEMPLATE_ID="template_z22dy7i";
+
 let cart=[];
 
 let discount=0;
@@ -789,9 +709,10 @@ const promoCodes={
 
 YASSIN10:10,
 WELCOME15:15,
-TORAS20:20,
-MOHMAD50:50,
-YOUSEFF30:30
+TORAS20:20
+
+};
+
 function toggleCart(){
 
 document.getElementById("cart").classList.toggle("active");
@@ -1343,7 +1264,7 @@ observer.observe(card);
 
 // Loading Screen
 
-window.addEventListener("load",()=>{
+window.onload=()=>{
 
 const loader=document.createElement("div");
 
