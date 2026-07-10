@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
 
@@ -371,36 +372,105 @@ color:white;
 border-radius:8px;
 
 }
-input{
-
-width:100%;
-
-padding:12px;
-
-margin-top:12px;
-
-background:#1a1a1a;
-
-border:1px solid #c8a04d;
-
-color:white;
-
-border-radius:8px;
-
-}
-
-/* ===========================
-   MOBILE RESPONSIVE
-=========================== */
+/* ================= MOBILE ================= */
 
 @media (max-width:768px){
 
-/* ALL THE CODE I SENT YOU */
-
+nav{
+padding:15px;
+height:auto;
+flex-direction:column;
+gap:15px;
 }
 
+.logo{
+font-size:26px;
+}
+
+nav ul{
+display:flex;
+justify-content:center;
+gap:18px;
+flex-wrap:wrap;
+}
+
+.cartButton{
+width:100%;
+text-align:center;
+}
+
+#landing{
+display:flex;
+flex-direction:column;
+height:100vh;
+margin-top:90px;
+}
+
+.side{
+width:100%;
+height:50%;
+font-size:60px;
+display:flex;
+justify-content:center;
+align-items:center;
+}
+
+.divider{
+width:100%;
+height:2px;
+background:#c8a04d;
+box-shadow:0 0 10px gold;
+}
+
+.shop{
+padding:110px 15px 30px;
+}
+
+.products{
+display:grid;
+grid-template-columns:repeat(2,1fr);
+gap:15px;
+}
+
+.card{
+padding:12px;
+}
+
+.card img{
+height:170px;
+}
+
+.card h2{
+font-size:20px;
+}
+
+button{
+padding:12px;
+font-size:15px;
+}
+
+#cart{
+width:100%;
+right:-100%;
+}
+
+#cart.active{
+right:0;
+}
+
+#checkoutPopup{
+width:90% !important;
+left:50% !important;
+transform:translateX(-50%) !important;
+}
+
+footer{
+padding:30px 15px !important;
+}
+
+}
 </style>
-</style>
+
 </head>
 
 <body>
@@ -727,7 +797,7 @@ Add To Cart
 emailjs.init("5bfxJmBRr2Tv4w7ja");
 
 const SERVICE_ID="service_3okjoac";
-const TEMPLATE_ID="template_z22dy7i";
+const TEMPLATE_ID="PUT_YOUR_EMAILJS_TEMPLATE_ID_HERE";
 
 let cart=[];
 
@@ -1125,6 +1195,7 @@ console.log(error);
 <!-- ===== PART 5 (BONUS FEATURES) ===== -->
 
 <!-- Floating WhatsApp Button -->
+
 <a href="https://wa.me/201234567890" target="_blank" id="whatsappBtn">
     💬
 </a>
@@ -1206,8 +1277,11 @@ alert("✨ Welcome to TORAS Fragrances");
 });
 
 </script>
+
 <!-- ===================== -->
+
 <!-- PART 6 - FINAL POLISH -->
+
 <!-- ===================== -->
 
 <footer style="margin-top:80px;background:#090909;padding:50px;text-align:center;border-top:2px solid gold;">
@@ -1223,16 +1297,12 @@ Luxury Perfumes • Premium Quality • Long Lasting
 <br>
 
 <a href="https://instagram.com/"
-style="color:gold;text-decoration:none;font-size:20px;">
-Instagram
-</a>
+style="color:gold;text-decoration:none;font-size:20px;">Instagram</a>
 
-&nbsp;&nbsp;&nbsp;
+   
 
 <a href="https://wa.me/201234567890"
-style="color:gold;text-decoration:none;font-size:20px;">
-WhatsApp
-</a>
+style="color:gold;text-decoration:none;font-size:20px;">WhatsApp</a>
 
 <br><br>
 
@@ -1321,5 +1391,6 @@ loader.remove();
 },1200);
 
 };
+/* ================= MOBILE ================= */
 
 </script>
