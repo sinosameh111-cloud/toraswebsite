@@ -372,196 +372,100 @@ color:white;
 border-radius:8px;
 
 }
+/* ================= MOBILE ================= */
+
 @media (max-width:768px){
 
-
-
 nav{
-
-padding:15px;
-
 height:auto;
-
+padding:15px;
 flex-direction:column;
-
-gap:15px;
-
+gap:12px;
 }
-
-
 
 .logo{
-
-font-size:26px;
-
+font-size:28px;
+letter-spacing:3px;
 }
-
-
 
 nav ul{
-
-display:flex;
-
-justify-content:center;
-
-gap:18px;
-
+gap:15px;
 flex-wrap:wrap;
-
+justify-content:center;
+font-size:15px;
 }
-
-
 
 .cartButton{
-
 width:100%;
-
 text-align:center;
-
+padding:12px;
 }
-
-
 
 #landing{
-
-display:flex;
-
 flex-direction:column;
-
-height:100vh;
-
-margin-top:90px;
-
+height:auto;
+margin-top:120px;
 }
-
-
 
 .side{
-
-width:100%;
-
-height:50%;
-
-font-size:60px;
-
-display:flex;
-
-justify-content:center;
-
-align-items:center;
-
+height:180px;
+font-size:42px;
 }
-
-
 
 .divider{
-
 width:100%;
-
 height:2px;
-
-background:#c8a04d;
-
-box-shadow:0 0 10px gold;
-
 }
-
-
 
 .shop{
-
-padding:110px 15px 30px;
-
+padding:120px 15px 40px;
 }
-
-
 
 .products{
-
-display:grid;
-
-grid-template-columns:repeat(2,1fr);
-
-gap:15px;
-
+grid-template-columns:1fr;
+gap:20px;
 }
-
-
 
 .card{
-
-padding:12px;
-
+padding:15px;
 }
-
-
 
 .card img{
-
-height:170px;
-
+height:260px;
 }
-
-
 
 .card h2{
-
-font-size:20px;
-
+font-size:24px;
+text-align:center;
 }
-
-
 
 button{
-
-padding:12px;
-
-font-size:15px;
-
+padding:15px;
+font-size:16px;
 }
 
-
+select{
+font-size:16px;
+}
 
 #cart{
-
 width:100%;
-
 right:-100%;
-
 }
-
-
 
 #cart.active{
-
 right:0;
-
 }
-
-
 
 #checkoutPopup{
-
-width:90% !important;
-
-left:50% !important;
-
-transform:translateX(-50%) !important;
-
+width:92%!important;
 }
-
-
 
 footer{
-
-padding:30px 15px !important;
-
+padding:35px 20px!important;
 }
 
-
-
 }
-
 </style>
 
 </head>
@@ -581,9 +485,8 @@ TORAS
 <li onclick="goHome()">Home</li>
 
 <li onclick="showMen()">Men</li>
-
 <li onclick="showWomen()">Women</li>
-
+<li onclick="showUnisex()">Unisex</li>
 </ul>
 
 <div class="cartButton" onclick="toggleCart()">
@@ -682,7 +585,7 @@ MEN COLLECTION
 
 <div class="card">
 
-<img src="images/youssef.jpg">
+<img src="youssef.jpeg">
 
 <h2>Youssef</h2>
 
@@ -712,7 +615,7 @@ Add To Cart
 
 <div class="card">
 
-<img src="images/dravon.jpg">
+<img src="dravon.jpeg">
 
 <h2>Dravon</h2>
 
@@ -742,7 +645,7 @@ Add To Cart
 
 <div class="card">
 
-<img src="images/tobacco.jpg">
+<img src="tobacco.jpeg">
 
 <h2>Tobacco</h2>
 
@@ -790,7 +693,7 @@ WOMEN COLLECTION
 
 <div class="card">
 
-<img src="images/tusunami.jpg">
+<img src="tusunami.jpeg">
 
 <h2>Tusunami</h2>
 
@@ -820,7 +723,7 @@ Add To Cart
 
 <div class="card">
 
-<img src="images/heaven.jpg">
+<img src="heaven.jpeg">
 
 <h2>Heaven</h2>
 
@@ -877,6 +780,159 @@ Add To Cart
 </button>
 
 </div>
+<!-- UNISEX -->
+ <div class="card">
+
+<img src="we never say good bye.jpeg">
+
+<h2>We Never Say Goodbye</h2>
+
+<select>
+<option value="400">40ML - 400 EGP</option>
+<option value="700">60ML - 700 EGP</option>
+</select>
+
+<button onclick="addToCart('We Never Say Goodbye',this)">
+Add To Cart
+</button>
+
+</div>
+ <div class="card">
+
+<img src="wsky.jpeg">
+
+<h2>Whisky</h2>
+
+<select>
+<option value="400">40ML - 400 EGP</option>
+<option value="700">60ML - 700 EGP</option>
+</select>
+
+<button onclick="addToCart('Whisky',this)">
+Add To Cart
+</button>
+
+</div>
+
+<section id="unisex" class="shop">
+<div class="card">
+
+<img src="the last birthday.jpeg">
+
+<h2>The Last Birthday</h2>
+
+<select>
+<option value="350">40ML - 350 EGP</option>
+<option value="650">60ML - 650 EGP</option>
+</select>
+
+<button onclick="addToCart('The Last Birthday',this)">
+Add To Cart
+</button>
+
+</div>
+
+<div class="card">
+
+<img src="nuts.jpeg">
+
+<h2>Nuts</h2>
+
+<select>
+<option value="400">40ML - 400 EGP</option>
+<option value="700">60ML - 700 EGP</option>
+</select>
+
+<button onclick="addToCart('Nuts',this)">
+Add To Cart
+</button>
+
+</div>
+
+<div class="card">
+
+<img src="a">
+
+<h2>Afternoon</h2>
+
+<select>
+<option value="400">40ML - 400 EGP</option>
+<option value="700">60ML - 700 EGP</option>
+</select>
+
+<button onclick="addToCart('Afternoon',this)">
+Add To Cart
+</button>
+
+</div>
+
+<div class="card">
+
+<img src="a">
+
+<h2>Intensely</h2>
+
+<select>
+<option value="400">40ML - 400 EGP</option>
+<option value="700">60ML - 700 EGP</option>
+</select>
+
+<button onclick="addToCart('Intensely',this)">
+Add To Cart
+</button>
+
+</div>
+<h1 class="title">
+UNISEX COLLECTION
+</h1>
+
+<div class="products">
+
+<div class="card">
+<img src="im">
+<h2>Oud Wood</h2>
+
+<select>
+<option value="450">40ML - 450 EGP</option>
+<option value="800">60ML - 800 EGP</option>
+</select>
+
+<button onclick="addToCart('Oud Wood',this)">
+Add To Cart
+</button>
+</div>
+
+<div class="card">
+<img src="">
+<h2>Baccarat Rouge</h2>
+
+<select>
+<option value="500">40ML - 500 EGP</option>
+<option value="900">60ML - 900 EGP</option>
+</select>
+
+<button onclick="addToCart('Baccarat Rouge',this)">
+Add To Cart
+</button>
+</div>
+
+<div class="card">
+<img src="images/another13.jpg">
+<h2>Another 13</h2>
+
+<select>
+<option value="450">40ML - 450 EGP</option>
+<option value="800">60ML - 800 EGP</option>
+</select>
+
+<button onclick="addToCart('Another 13',this)">
+Add To Cart
+</button>
+</div>
+
+</div>
+
+</section>
 
 </div>
 
@@ -886,11 +942,23 @@ Add To Cart
 <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
 
 <script>
+    function showUnisex(){
+
+landing.style.display="none";
+
+men.style.display="none";
+
+women.style.display="none";
+
+unisex.style.display="block";
+
+}
 
 emailjs.init("5bfxJmBRr2Tv4w7ja");
 
 const SERVICE_ID="service_3okjoac";
-const TEMPLATE_ID="template_82btlg8";
+const ATE_ID="template_z22dy7i";
+
 let cart=[];
 
 let discount=0;
